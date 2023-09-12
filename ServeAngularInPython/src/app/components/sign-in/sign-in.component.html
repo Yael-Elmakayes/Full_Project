@@ -1,0 +1,21 @@
+<div class="container" style="align-items: center; width: 30rem;">
+  
+  <img [src]="img">
+  <form [formGroup]="signInForm" (ngSubmit)="onSubmit()" class="dropdown-menu p-4 row card ">
+    <div class="mb-3">
+      <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+      <input type="email" class="form-control" formControlName="mail" id="mail">
+    </div>
+    <div class="mb-3">
+      <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+      <input type="password" class="form-control" formControlName="pass" id="pass">
+    </div>
+    <button type="submit" [disabled]="!signInForm.valid" class="btn btn-success" style="background-color: rgb(63, 180, 153);border-color:rgb(63, 180, 153);" >Sign in</button>
+  </form>
+
+  <!-- Display message to user -->
+  <div *ngIf="message" class="alert alert-primary mt-3" role="alert">
+    {{ message }}
+  </div>
+  <a *ngIf="showRegisterButton" routerLink="/SignUp">להרשמה לחץ כאן</a>
+</div>

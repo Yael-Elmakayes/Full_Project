@@ -1,0 +1,47 @@
+<!-- <div style="margin: 100px;">
+    
+    <div *ngIf="showComponent" style="display: flex; flex-direction: row;">
+
+        <div class="app-speech-input" [class.app-speech-input-listening]>
+        <button class="app-speech-input-btn"  (click)="startService()"></button>
+        <button style="margin: 10px;" (click)="stopService()">Stop</button>
+          <button class="app-speech-input-btn"(click)="startService()"></button>
+    <textarea 
+    style="border:10px,rgba(106, 174, 206, 0.118);"  id="txt" >{{text}}</textarea>
+    </div>
+    <button (click)="sendSentence()" style="    color: white;
+background-color: #1a9da5;
+border: none;
+padding: 5px;
+margin: 10px;
+width: 314px;">שלח</button>
+</div>
+ (click)="showComponent = !showComponent" -->
+
+ <div class="app-container">
+    <div class="app-container-inner">
+      <div class="app-speech-input" >
+
+        <button class="app-speech-input-btn" (click)="stopVoice ? stopService() : startService()">
+          </button>
+
+
+        <!-- <button  class="app-speech-input-btn" (click)="startService()" ></button> -->
+        <!-- <button (click)="stopService()">stop</button> -->
+        <input style="width: 287px;
+        height: 52px;"
+        class="app-speech-input-form-control form-control" type="text" [value]="txt" id="spokenText">
+        <button class="my-button" (click)="sendSentence()">שלח</button>
+
+    </div>
+    </div>
+  </div>
+
+
+  <div class="circle-container">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>

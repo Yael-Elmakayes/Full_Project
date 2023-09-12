@@ -1,0 +1,15 @@
+@media (max-width: 767px) {
+    .navbar-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .nav-item {
+      margin-bottom: 10px;
+    }
+    
+.navbar-nav .nav-link {
+    color: black !important;
+  }
+  }

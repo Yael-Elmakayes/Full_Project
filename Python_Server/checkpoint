@@ -1,0 +1,2 @@
+model_checkpoint_path: "SLD_val_loss"
+all_model_checkpoint_paths: "SLD_val_loss"

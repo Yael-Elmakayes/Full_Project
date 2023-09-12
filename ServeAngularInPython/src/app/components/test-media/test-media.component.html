@@ -1,0 +1,10 @@
+<p>test-media works!</p>
+<div>
+    <h1>My Component</h1>
+    <label>Enter a number:</label>
+    <input type="number" [(ngModel)]="num">
+    <button (click)="sendNumber()">Send number</button>
+    <div *ngIf="array">
+      <p>Received array: {{ array }}</p>
+    </div>
+  </div>

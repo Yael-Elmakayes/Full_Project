@@ -1,0 +1,17 @@
+<div class="form-container">
+    <button (click)="showMessage()">Register to the system</button>
+    <div *ngIf="showForm">
+      <p>Enter your name:</p>
+      <input [(ngModel)]="name">
+      <p>Enter your ID:</p>
+      <input [(ngModel)]="id">
+      <p>The third step is to take a photo of yourself:</p>
+      <video #video autoplay></video>
+      <canvas #canvas></canvas>
+      <button (click)="takePhoto()">Take a photo</button>
+    </div>
+  </div>
+  
+  <div class="result-container" *ngIf="showResult">
+    <p>{{ resultMessage }}</p>
+  </div>

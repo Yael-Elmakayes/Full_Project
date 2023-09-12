@@ -1,0 +1,31 @@
+<div class="container" style="align-items: center; width: 25rem;">
+  <img [src]="im">
+  <form [formGroup]="signUpForm" class="dropdown-menu p-1 row card fs-6" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">First name</label>
+      <input type="text" formControlName="firstName" class="form-control" id="firstName">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Last name</label>
+      <input type="text" formControlName="lastName" class="form-control" id="lastName">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+      <input type="email" formControlName="email" class="form-control" id="email">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" id="firstName">Phone</label>
+      <input type="tel" formControlName="phone" class="form-control" id="phone">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+      <input type="password" formControlName="pass" class="form-control" id="pass">
+    </div>
+
+    <button type="submit" [disabled]="!signUpForm.valid" class="btn btn-success mb-2" style="background-color: rgb(63, 180, 153);border-color:rgb(63, 180, 153);" >Sign up</button>
+  </form>
+</div>

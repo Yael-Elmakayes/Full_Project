@@ -1,0 +1,12 @@
+
+
+<!-- הדף הראשי של הבית -->
+
+<input type="text" placeholder="enter name" #n (input)="userName=n.value">
+<!-- כשאתה לוחץ על הארוע קליק מופעלת הפונקציה שלוקחת את הקלט שכתבתי לתוך האינפוט ומציגה לי אותו על המסך -->
+<input type="button" value="check" (click)="checkUser()">     
+
+
+<!-- <app-camera></app-camera> -->
+
+<h3>{{msg}}</h3>

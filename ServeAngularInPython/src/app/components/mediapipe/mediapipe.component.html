@@ -1,0 +1,3 @@
+<p>mediapipe works!</p>
+<input type="file" (change)="onFileSelected($event)">
+<img *ngIf="processedImage" [src]="'data:image/jpeg;base64,' + processedImage">
